@@ -1,0 +1,6 @@
+.aside {
+    display: flex;    
+    flex-direction: column;
+    width: 200px;    
+    border-right: 2px solid rgba(219, 92, 0, 1.0);
+}

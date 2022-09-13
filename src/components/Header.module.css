@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    border-bottom: 2px solid rgba(219, 92, 0, 1.0);
+}
+
+.buttons {
+    margin: 10px 30px;
+}
