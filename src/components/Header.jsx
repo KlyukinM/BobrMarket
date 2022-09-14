@@ -1,8 +1,9 @@
 import cl from './Header.module.css'
 import HeaderButton from './UI/HeaderButton/HeaderButton'
 import HeaderInput from './UI/HeaderInput/HeaderInput'
+import logo from '../images/logo.png'
 
-export function Header ({logo}) {
+export function Header () {
     return (
         <div className={cl.header}>
             <div><img src={logo} alt='logo' /></div>

@@ -1,6 +1,7 @@
 .aside {
     display: flex;    
     flex-direction: column;
-    width: 200px;    
+    flex: 1 1 20%;
+    max-width: 250px;
     border-right: 2px solid rgba(219, 92, 0, 1.0);
 }

@@ -26,4 +26,6 @@ body {
   text-align: center;
 }
 
-
+.content_wrapper {
+  display: flex;
+}

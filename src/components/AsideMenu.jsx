@@ -10,7 +10,7 @@ export default function AsideMenu ({categorySelected, setCategorySelected}) {
 
     const [fetchCategories, isCategoriesLoading, categoryError] = useFetching(async () => {
         const categoriesList = await GoodsService.getCategories()
-        setCategories([...categories, ...categoriesList.data]) 
+        setCategories([...categories, ...categoriesList]) 
     })
 
     useEffect(() => {
