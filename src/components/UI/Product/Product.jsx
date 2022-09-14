@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import cl from './Product.module.css'
 
-export default function Product ({product}) {    
+export default function Product ({product}) {  
+    const navigate = useNavigate()  
+
     return (
-        <div className={cl.product}>
+        <div className={cl.product} onClick={() => navigate(`/product/${product.id}`, {replace: true})}>
             <div className={cl.img_wrapper}>                
                 <img className={cl.img} src={product.thumbnail} alt='product'/>
             </div>            

@@ -2,6 +2,7 @@
     display: inline-block;
     width: 80px;
     height: 80px;
+    margin-top: 30px;
   }
   .loader:after {
     content: " ";
@@ -23,3 +24,8 @@
     }
   }
   
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}

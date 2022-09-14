@@ -1,0 +1,39 @@
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px;
+}
+
+.image_wrapper {
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description_wrapper {
+    flex: 1 1 60%;
+    font-size: 18px;
+    line-height: 200%;
+}
+
+.description_wrapper span {
+    font-weight: bold;
+}
+
+.detailed_description {
+    flex: 1 1 100%;    
+    font-size: 18px;
+    text-align: center;
+    margin-top: 30px;
+}

@@ -11,13 +11,8 @@ export default class GoodsService {
         return response.data          
     }
 
-    static async getProductsOfCategory(limit = 10, skip = 0, category) {
-        const response = await axios.get(`https://dummyjson.com/products/category/${category}`, {
-            params: {
-                limit: limit,
-                skip: skip
-            }            
-        })
+    static async getProductsOfCategory(category) {
+        const response = await axios.get(`https://dummyjson.com/products/category/${category}`)
         return response.data             
     }
 
