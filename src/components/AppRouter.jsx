@@ -9,6 +9,7 @@ export default function AppRouter () {
                     <Route key={index + 1} path={route.path} element={<route.element/>} />
                 )}
                 <Route path="*" element={<Navigate to="/" replace />} />
+                <Route path="/All%20categories" element={<Navigate to="/" replace />} />
             </Routes>            
     )
 }

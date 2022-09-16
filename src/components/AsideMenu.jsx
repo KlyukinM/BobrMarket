@@ -5,19 +5,17 @@ import cl from './AsideMenu.module.css'
 import { useFetching } from "./hooks/useFetching";
 import Loader from './UI/Loader/Loader'
 
-export default function AsideMenu ({categorySelected, setCategorySelected}) {
-    const [categories, setCategories] = useState(['All categories'])    
+export default function AsideMenu ({categorySelected}) {
+    const [categories, setCategories] = useState([])    
 
     const [fetchCategories, isCategoriesLoading, categoryError] = useFetching(async () => {
         const categoriesList = await GoodsService.getCategories()
-        setCategories([...categories, ...categoriesList]) 
-    })
+        setCategories(categoriesList) 
+    })    
 
     useEffect(() => {
         fetchCategories()
-    }, [])    
-
-    const categorySelect = category => setCategorySelected(category) 
+    }, [])        
 
     return (
         <aside className={cl.aside}>
@@ -26,9 +24,11 @@ export default function AsideMenu ({categorySelected, setCategorySelected}) {
                 ? <Loader />
                 : 
             <div>
+                <AsideButton
+                    active={!categorySelected ? true : false}  
+                    name='All categories'    />
                 {categories.map((category, index) => 
-                <AsideButton 
-                    categorySelect={categorySelect}
+                <AsideButton                     
                     key={index + 1} 
                     active={categorySelected === category ? true : false} 
                     name={category}                   

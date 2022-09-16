@@ -4,6 +4,6 @@ import ProductPage from "../pages/ProductPage";
 
 export const routes = [
     {path: '/', element: MainPage},    
-    {path: '/product/:id', element: ProductPage}, 
-    
+    {path: '/product/:id', element: ProductPage},     
+    {path: '/:category', element: MainPage},    
 ]

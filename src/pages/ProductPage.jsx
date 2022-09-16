@@ -28,7 +28,8 @@ export default function ProductPage () {
     })
 
     useEffect(() => {
-        fetchProductsOfCategory(product.category)        
+        fetchProductsOfCategory(product.category)  
+        window.scrollTo({ behavior: 'smooth', top: '0px' })      
     }, [product])
     
 
