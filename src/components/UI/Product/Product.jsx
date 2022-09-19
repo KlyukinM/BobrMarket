@@ -3,7 +3,7 @@ import BuyButton from '../BuyButton/BuyButton'
 import cl from './Product.module.css'
 
 export default function Product ({product}) {  
-    const navigate = useNavigate()  
+    const navigate = useNavigate()      
 
     return (
         <div className={cl.product} onClick={() => navigate(`/product/${product.id}`, {replace: true})}>
@@ -14,7 +14,7 @@ export default function Product ({product}) {
                 <div className={cl.title}>{product.title}</div>
                 <div className={cl.rating}>User rating: <span>{product.rating}/5</span></div>
                 <div className={cl.price}>{new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(product.price)}</div>                
-                <BuyButton>BUY IT!</BuyButton>
+                <BuyButton product={product}>Add to Cart</BuyButton>
             </div>
         </div>
     )

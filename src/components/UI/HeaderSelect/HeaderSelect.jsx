@@ -1,6 +1,9 @@
+import cl from './HeaderSelect.module.css'
+
 export default function HeaderSelect ({options, defaultValue, value, onChange}) {
     return (
-        <select 
+        <select
+            className={cl.select} 
             value={value}
             onChange={e => onChange(e.target.value)}
         >

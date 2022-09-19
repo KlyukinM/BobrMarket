@@ -10,6 +10,7 @@ import { getPageCount } from '../utils/pages';
 import Pagination from '../components/UI/Pagination/Pagination';
 import { useParams } from 'react-router-dom';
 import HeaderSelect from '../components/UI/HeaderSelect/HeaderSelect';
+import useSorting from '../components/hooks/useSorting';
 
 
 function MainPage() {
@@ -29,8 +30,10 @@ function MainPage() {
   let params = useParams()      
   // Состояние для сортировки
   const [selectedSort, setSelectedsort] = useState('')
+  // Кастомный хук useSorting, который отвечает за сортировку продуктов на странице
+  const sortedProducts = useSorting(products, selectedSort)
 
-  // Функция для получения с сервера товаров всех категорий
+  // Функция для получения с сервера товаров всех категорий - кастомный хук useFetching
   const [fetchAllProducts, isAllProductsLoading, allProductsError] = useFetching( async() => {
     // Проверяем действительно ли свойство category объекта params undefined, чтобы предотвратить ошибочные срабатывания
     if (!params.category) {
@@ -69,6 +72,8 @@ function MainPage() {
     page !== 1 && changePage(1)    
     // Плавно прокручиваем скролл вверх
     window.scrollTo({ behavior: 'smooth', top: '0px' })  
+    // Сбрасываем сортировку на странице
+    setSelectedsort('')
   }
 
   // Хук useEffect, который вызывает функцию categoryChange при каждой смене выбранной категории categorySelected
@@ -98,10 +103,11 @@ function MainPage() {
     window.scrollTo({ behavior: 'smooth', top: '0px' })  
   }
 
-  const sortProducts = () => {
-    
+  // Функция для изменения критерия сортировки
+  const sortProducts = (value) => {
+    // Которая просто передает выбранную опцию в соответствующее состояние
+    setSelectedsort(value)    
   }
-
 
   return (
     <div className="App">
@@ -109,23 +115,25 @@ function MainPage() {
       {(allProductsError || productsOfCategoryError) && <h1>Error: {allProductsError || productsOfCategoryError}</h1>}      
       <div className='content_wrapper'>
         <AsideMenu categorySelected={categorySelected} />
-        <div>
-          <HeaderSelect 
-            value={selectedSort}            
-            onChange={sortProducts}            
-            defaultValue='Sort by'        
-                  options={[
-                    {value: 'price-to-high', name: 'Price: Low to High'},
-                    {value: 'price-to-low', name: 'Price: High to Low'},
-                    {value: 'rating-to-high', name: 'Rating: Low to High'},
-                    {value: 'rating-to-low', name: 'Rating: High to Low'},
-                  ]}
-        
-          
-          />
+        <div>                   
           {isAllProductsLoading || isProductsOfCategoryLoading 
             ? <Loader />
-            : <ProductList products={products} />}    
+            : <div>
+                {products.length && <div className='select_wrapper'>
+                  <HeaderSelect 
+                    value={selectedSort}            
+                    onChange={sortProducts}            
+                    defaultValue='Sort by'        
+                          options={[
+                            {value: 'price-to-high', name: 'Price: Low to High'},
+                            {value: 'price-to-low', name: 'Price: High to Low'},
+                            {value: 'rating-to-high', name: 'Rating: Low to High'},
+                            {value: 'rating-to-low', name: 'Rating: High to Low'},
+                          ]}
+                  />
+                </div>} 
+                <ProductList products={sortedProducts} />
+              </div>}    
           {totalPages > 1 && <Pagination 
             page={page} 
             changePage={changePage} 

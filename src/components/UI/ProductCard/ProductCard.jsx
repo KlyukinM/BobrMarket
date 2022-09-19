@@ -3,7 +3,8 @@ import BuyButton from '../BuyButton/BuyButton'
 import cl from './ProductCard.module.css'
 
 export default function ProductCard ({product}) {
-    const navigate = useNavigate()
+    const navigate = useNavigate()       
+   
     return (
         <div>
             <div className={cl.title}>{product.title}</div>
@@ -25,7 +26,7 @@ export default function ProductCard ({product}) {
                         <div><span>Discount:</span> {product.discountPercentage}%</div>
                         <div><span>Price:</span> {new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(product.price)}</div>
                     </div>
-                    <BuyButton>BUY IT!</BuyButton>
+                    <BuyButton product={product}>Add to Cart</BuyButton>
                     <div className={cl.detailed_description}>{product.description}</div>
                 </div> 
         </div>

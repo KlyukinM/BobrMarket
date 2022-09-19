@@ -1,14 +1,16 @@
 .button {    
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: rgba(234, 97, 25, 1.0);
     padding: 5px 10px;
     margin-bottom: 20px;
-    background-color: rgba(234, 97, 25, 1.0);    
+    background-color: transparent;  
+    border: 1px solid rgba(234, 97, 25, 1.0);  
     border-radius: 10px;
     transition: all 0.3s ease 0s;
 }
 
 .button:hover {
-
+    color: white;
+    background-color: rgba(234, 97, 25, 1.0);   
 }
