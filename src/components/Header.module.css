@@ -2,10 +2,42 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    height: 150px;
-    border-bottom: 2px solid rgba(219, 92, 0, 1.0);
+    height: 140px;
+    border-bottom: 2px solid rgba(79, 95, 118, 1.0);
 }
 
 .buttons {
     margin: 10px 30px;
+}
+
+.logo_wrapper {
+    display: flex;    
+    align-items: center;    
+    margin-bottom: 20px;    
+}
+
+.logo_wrapper:hover .logo{
+    transform: scale(1.1);
+}
+
+.logo {
+    background: url('../images/logo.png') no-repeat center / cover;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;   
+    margin-left: 20px;
+    transition: all 0.5s ease 0s;
+}
+
+.logo_title {
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 7px;
+    margin-left: 15px;
+    color: rgba(44, 62, 84, 1.0);
+}
+
+.logo_title span {
+    color: rgba(234, 97, 25, 1.0);
 }

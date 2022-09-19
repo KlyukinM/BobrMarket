@@ -9,6 +9,7 @@ import Loader from '../components/UI/Loader/Loader';
 import { getPageCount } from '../utils/pages';
 import Pagination from '../components/UI/Pagination/Pagination';
 import { useParams } from 'react-router-dom';
+import HeaderSelect from '../components/UI/HeaderSelect/HeaderSelect';
 
 
 function MainPage() {
@@ -26,6 +27,8 @@ function MainPage() {
   const [skip, setSkip] = useState(0)  
   // Хук useParams для определения категории на основе адреса страницы
   let params = useParams()      
+  // Состояние для сортировки
+  const [selectedSort, setSelectedsort] = useState('')
 
   // Функция для получения с сервера товаров всех категорий
   const [fetchAllProducts, isAllProductsLoading, allProductsError] = useFetching( async() => {
@@ -95,14 +98,31 @@ function MainPage() {
     window.scrollTo({ behavior: 'smooth', top: '0px' })  
   }
 
+  const sortProducts = () => {
+    
+  }
+
 
   return (
     <div className="App">
-      <Header search='true'/>
+      <Header />
       {(allProductsError || productsOfCategoryError) && <h1>Error: {allProductsError || productsOfCategoryError}</h1>}      
       <div className='content_wrapper'>
         <AsideMenu categorySelected={categorySelected} />
-        <div>           
+        <div>
+          <HeaderSelect 
+            value={selectedSort}            
+            onChange={sortProducts}            
+            defaultValue='Sort by'        
+                  options={[
+                    {value: 'price-to-high', name: 'Price: Low to High'},
+                    {value: 'price-to-low', name: 'Price: High to Low'},
+                    {value: 'rating-to-high', name: 'Rating: Low to High'},
+                    {value: 'rating-to-low', name: 'Rating: High to Low'},
+                  ]}
+        
+          
+          />
           {isAllProductsLoading || isProductsOfCategoryLoading 
             ? <Loader />
             : <ProductList products={products} />}    

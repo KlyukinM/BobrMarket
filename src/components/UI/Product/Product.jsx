@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import BuyButton from '../BuyButton/BuyButton'
 import cl from './Product.module.css'
 
 export default function Product ({product}) {  
@@ -12,7 +13,8 @@ export default function Product ({product}) {
             <div>
                 <div className={cl.title}>{product.title}</div>
                 <div className={cl.rating}>User rating: <span>{product.rating}/5</span></div>
-                <div className={cl.price}>{new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(product.price)}</div>
+                <div className={cl.price}>{new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(product.price)}</div>                
+                <BuyButton>BUY IT!</BuyButton>
             </div>
         </div>
     )

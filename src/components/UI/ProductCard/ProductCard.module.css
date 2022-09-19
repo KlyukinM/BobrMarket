@@ -35,5 +35,17 @@
     flex: 1 1 100%;    
     font-size: 18px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
+}
+
+.link {
+    color: rgba(234, 97, 25, 1.0);
+}
+
+.link span {
+    color: rgba(44, 62, 84, 1.0);
+}
+
+.link:hover {
+    cursor: pointer;    
 }

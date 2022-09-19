@@ -1,23 +1,23 @@
 .button {
     padding: 10px 10px 10px 10px;
     background-color: transparent;
-    color: rgba(219, 92, 0, 1.0);
+    color: rgba(234, 97, 25, 1.0);
     font-size: 16px;
     text-transform: uppercase;   
     flex: 0 0 100%;
-    transition: all 0.2s ease 0s;
+    transition: all 0.1s ease 0s;
     width: 100%;
 }
 
 .button:hover {
-    background-color: rgba(219, 92, 0, 1.0);
+    background-color: rgba(234, 97, 25, 1.0);
     color: white;
     font-weight: 700;
 }
 
 .active {
     padding: 10px 10px 10px 10px;
-    background-color: rgba(219, 92, 0, 1.0);
+    background-color: rgba(234, 97, 25, 1.0);
     color: white;
     font-weight: 700;
     font-size: 16px;
