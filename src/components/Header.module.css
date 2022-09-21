@@ -19,6 +19,7 @@
 
 .logo_wrapper:hover .logo{
     transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(44, 62, 84, 0.4);
 }
 
 .logo {
@@ -53,19 +54,30 @@
 .svg {
     width: 50px;
     height: 50px;
-    fill: rgba(44, 62, 84, 0.5);
+    fill: rgba(44, 62, 84, 0.6);
     transition: all 0.3s ease 0s;    
 }
 
-.svg:hover {    
+.svg:hover {
+    fill: rgba(44, 62, 84, 1.0); 
+}
+
+.svg_active {    
+    width: 50px;
+    height: 50px;
     fill: rgba(44, 62, 84, 1.0);
+    transition: all 0.3s ease 0s;     
+}
+
+.svg_active:hover {
+    fill: rgba(234, 97, 25, 1.0);
 }
 
 .number_wrapper {
     color: white;
     background-color: rgba(234, 97, 25, 1.0);
     width: 25px;
-    height: 25px;
+    height: 25px;    
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -73,6 +85,7 @@
     position: absolute;
     bottom: 25px;
     left: 14px;
+    box-shadow: 0 0 5px rgba(44, 62, 84, 0.8);
 }
 
 .none {
@@ -81,6 +94,6 @@
 
 .number {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 3px;
 }

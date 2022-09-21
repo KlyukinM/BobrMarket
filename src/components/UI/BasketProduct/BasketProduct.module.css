@@ -1,0 +1,53 @@
+.wrapper {
+    display: flex;
+    max-width: 100%;
+    margin: 20px 40px;    
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(79, 95, 118, 0.4);
+    font-size: 18px;
+    transition: all 0.5s ease 0s;
+}
+
+.wrapper:hover {
+    box-shadow: 0 0 10px rgba(79, 95, 118, 0.8);
+}
+
+.image {
+    flex: 0 1 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.image img {
+    height: 80px;
+}
+
+.title {
+    flex: 0 1 30%;
+}
+
+.price {
+    flex: 0 1 30%;
+}
+
+.button_wrapper {
+    flex: 0 1 10%;
+}
+
+
+.delete_icon {
+    width: 30px;
+    height: 30px;
+    fill: rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.delete_icon:hover {
+    width: 30px;
+    height: 30px;
+    fill: rgba(234, 97, 25, 1.0);
+}

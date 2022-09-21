@@ -14,7 +14,7 @@ export default function Product ({product}) {
                 <div className={cl.title}>{product.title}</div>
                 <div className={cl.rating}>User rating: <span>{product.rating}/5</span></div>
                 <div className={cl.price}>{new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(product.price)}</div>                
-                <BuyButton product={product}>Add to Cart</BuyButton>
+                <BuyButton product={product} />
             </div>
         </div>
     )

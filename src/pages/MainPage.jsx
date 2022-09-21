@@ -1,5 +1,6 @@
 import '../App.css';
 import AsideMenu from '../components/AsideMenu';
+import Footer from '../components/Footer'
 import {useEffect, useState} from 'react'
 import { useFetching } from '../components/hooks/useFetching';
 import GoodsService from '../components/API/GoodsService';
@@ -27,7 +28,7 @@ function MainPage() {
   // Состояние для изменения количества пропускаемых товаров (для постраничной пагинации)
   const [skip, setSkip] = useState(0)  
   // Хук useParams для определения категории на основе адреса страницы
-  let params = useParams()      
+  const params = useParams()      
   // Состояние для сортировки
   const [selectedSort, setSelectedsort] = useState('')
   // Кастомный хук useSorting, который отвечает за сортировку продуктов на странице
@@ -62,7 +63,7 @@ function MainPage() {
   }
   
   // Хук useEffect, который вызывает функцию paramsChange при каждой смене значения переменной params
-  useEffect(() => {paramsChange()} , [params])
+  useEffect(() => {paramsChange()} , [params.category])
 
   // Функция для отправки запроса на сервер при смене выбранной категории
   const categoryChange = () => {    
@@ -140,7 +141,8 @@ function MainPage() {
             totalPages={totalPages} 
           />  }
         </div>           
-      </div>                    
+      </div> 
+      <Footer />                   
     </div>
   );
 }

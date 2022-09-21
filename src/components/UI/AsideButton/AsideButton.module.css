@@ -12,7 +12,7 @@
 .button:hover {
     background-color: rgba(234, 97, 25, 1.0);
     color: white;
-    font-weight: 700;
+    font-weight: 700;    
 }
 
 .active {
@@ -24,4 +24,5 @@
     text-transform: uppercase;   
     flex: 0 0 100%;   
     width: 100%;
+    box-shadow: 0 0 10px rgba(44, 62, 84, 0.6);
 }

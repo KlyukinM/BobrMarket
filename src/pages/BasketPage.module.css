@@ -1,0 +1,37 @@
+.page_title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;   
+    margin-top: 30px;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;   
+    margin: 50px;
+}
+
+.subtitle {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;     
+}
+
+.link {
+    color: rgba(234, 97, 25, 1.0);
+}
+
+.wrapper {
+    display: flex;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.products {
+    flex: 1 1 70%;
+}
+
+.order {
+    flex: 1 1 30%;
+}

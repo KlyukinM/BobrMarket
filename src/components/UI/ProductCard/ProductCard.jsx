@@ -10,7 +10,7 @@ export default function ProductCard ({product}) {
             <div className={cl.title}>{product.title}</div>
                 <div className={cl.wrapper}>
                     <div className={cl.image_wrapper}>
-                        <img  src={product.thumbnail} alt={product.title}/>
+                        <img  src={product.thumbnail} alt={product.title}/>                        
                     </div>
                     <div className={cl.description_wrapper}>
                         <div 
@@ -26,7 +26,7 @@ export default function ProductCard ({product}) {
                         <div><span>Discount:</span> {product.discountPercentage}%</div>
                         <div><span>Price:</span> {new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD' }).format(product.price)}</div>
                     </div>
-                    <BuyButton product={product}>Add to Cart</BuyButton>
+                    <BuyButton product={product} big={true} />
                     <div className={cl.detailed_description}>{product.description}</div>
                 </div> 
         </div>

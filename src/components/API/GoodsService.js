@@ -4,8 +4,8 @@ export default class GoodsService {
     static async getAll(limit = 10, skip = 0) {
         const response = await axios.get('https://dummyjson.com/products', {
             params: {
-                limit: limit,
-                skip: skip
+                limit,
+                skip
             }            
         })
         return response.data          

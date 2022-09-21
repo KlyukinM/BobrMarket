@@ -7,9 +7,10 @@ import ProductList from "../components/ProductList";
 import { Header } from "../components/Header";
 import ProductCard from "../components/UI/ProductCard/ProductCard";
 import Loader from "../components/UI/Loader/Loader";
+import Footer from "../components/Footer";
 
 export default function ProductPage () {
-    let params = useParams()
+    const params = useParams()
     const [product, setProduct] = useState({})
     const [products, setProducts] = useState([])
     const [fetchOneProduct, isProductLoading, productError] = useFetching(async(id) => {
@@ -18,8 +19,8 @@ export default function ProductPage () {
     })
 
     useEffect(() => {
-        fetchOneProduct(params.id)        
-    }, [params])
+        fetchOneProduct(params.id)  
+    }, [params.id])
 
     const [fetchProductsOfCategory, isProductsOfCategoryLoading, productCategoryError] = useFetching(async(category) => {
         const response = await GoodsService.getProductsOfCategory(category) 
@@ -29,7 +30,7 @@ export default function ProductPage () {
 
     useEffect(() => {
         fetchProductsOfCategory(product.category)  
-        window.scrollTo({ behavior: 'smooth', top: '0px' })      
+        window.scrollTo({ behavior: 'smooth', top: '0px' }) 
     }, [product])
     
 
@@ -45,6 +46,7 @@ export default function ProductPage () {
             {isProductsOfCategoryLoading
                 ? <Loader />
                 : <ProductList products={products}/>} 
+            <Footer />
         </div>
     )
 }

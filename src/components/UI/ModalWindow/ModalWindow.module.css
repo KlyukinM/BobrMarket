@@ -1,0 +1,48 @@
+.myModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    visibility: hidden; 
+    opacity: 0;   
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease 0s;
+}
+
+.myModalContent {
+    padding: 25px;
+    background: white;
+    border-radius: 16px;
+    min-width: 250px;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.myModal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    visibility: visible;
+    opacity: 1;
+}
+
+.myModal.active .myModalContent {
+    opacity: 1; 
+}
+
+.content {
+    font-size: 24px;
+    text-align: center;
+    line-height: 200%;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.signature {
+    margin-top: 20px;
+}

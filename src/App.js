@@ -1,15 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AppRouter from './components/AppRouter';
-import Footer from './components/Footer';
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 // Импортируем хук useContext 
 import { CartContext } from './context/context';
 
-
-
-
-function App() {
+export default function App() {
   // Состояние для корзины 
   const [cart, setCart] = useState([])
 
@@ -18,20 +14,27 @@ function App() {
     setCart([...cart, item])    
   }  
 
+  // Функция для удаления товара из корзины
+  const removeFromCart = product => {
+    const indexOfProduct = cart.indexOf(product) 
+    const newCart = [...cart]
+    newCart.splice(indexOfProduct, 1)      
+    setCart(newCart)
+  }
+
+
   return (
     <CartContext.Provider 
       value={{
         cart,        
-        addToCart
+        addToCart,
+        removeFromCart
       }}
     >
       <BrowserRouter>        
-        <AppRouter /> 
-        <Footer />            
+        <AppRouter />                    
       </BrowserRouter>
     </CartContext.Provider>
      
   )
 }
-
-export default App;
