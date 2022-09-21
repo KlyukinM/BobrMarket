@@ -11,7 +11,7 @@ export default function BasketPage () {
     const {cart} = useContext(CartContext)
     const [modal, setModal] = useState(false)
 
-    // Состояние для пустой корзины
+    // Переменная для пустой корзины
     let basketIsFull = Boolean(cart.length)
 
     const sortedProducts = [...cart].sort((a, b) => a.id - b.id)
