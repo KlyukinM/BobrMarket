@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { CartContext } from '../../../context/context'
 import cl from './ModalWindow.module.css'
 
 export default function ModalWindow ({visible, setVisible}) {
@@ -6,10 +8,12 @@ export default function ModalWindow ({visible, setVisible}) {
     if (visible) {
         rootClasses.push(cl.active)
     }
+    
+    const {setCart} = useContext(CartContext)
 
     const clickFunction = () => {
         setVisible(false)
-        window.location.reload()
+        setCart([])
     }
     return (
         <div 

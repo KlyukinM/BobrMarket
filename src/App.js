@@ -26,7 +26,8 @@ export default function App() {
   return (
     <CartContext.Provider 
       value={{
-        cart,        
+        cart,
+        setCart,        
         addToCart,
         removeFromCart
       }}
