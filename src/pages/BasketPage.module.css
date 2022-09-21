@@ -1,19 +1,19 @@
 .page_title {
-    font-size: 30px;
+    font-size: calc(12px + 30 * (100vw - 320px) / 1920);
     font-weight: bold;
-    text-align: center;   
-    margin-top: 30px;
+    text-align: center;
+    margin-top: calc(10px + 30 * (100vw - 320px) / 1920);
 }
 
 .title {
-    font-size: 30px;
+    font-size: calc(12px + 30 * (100vw - 320px) / 1920);
     font-weight: bold;
     text-align: center;   
-    margin: 50px;
+    margin: calc(15px + 50 * (100vw - 320px) / 1920);
 }
 
 .subtitle {
-    font-size: 30px;
+    font-size: calc(12px + 30 * (100vw - 320px) / 1920);
     font-weight: bold;
     text-align: center;     
 }
@@ -24,8 +24,8 @@
 
 .wrapper {
     display: flex;
-    padding-bottom: 40px;
-    padding-top: 20px;
+    padding-bottom: calc(15px + 40 * (100vw - 320px) / 1920);
+    padding-top: calc(8px + 20 * (100vw - 320px) / 1920);
 }
 
 .products {

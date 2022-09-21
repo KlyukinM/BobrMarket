@@ -1,9 +1,9 @@
 .product {
-    flex: 1 1 auto;
-    max-width: 370px;
-    margin-top: 30px;
+    flex: 1 1 auto;    
+    max-width: calc(55px + 370 * (100vw - 320px) / 1920);
+    margin-top: calc(10px + 30 * (100vw - 320px) / 1920);
     box-shadow: 0 0 10px rgba(79, 95, 118, 0.4);
-    border-radius: 10px;    
+    border-radius: calc(3px + 10 * (100vw - 320px) / 1920);    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -12,28 +12,28 @@
     text-align: center;        
 }
 
-.img_wrapper {
-    height: 330px;
-    width: 330px;
-    margin-top: 20px;      
+.img_wrapper {    
+    height: calc(45px + 330 * (100vw - 320px) / 1920);
+    width: calc(45px + 330 * (100vw - 320px) / 1920);
+    margin-top: calc(5px + 20 * (100vw - 320px) / 1920);      
     overflow: hidden; 
 }
 
 .img {
-    max-width: 330px;  
-    max-height: 330px;  
+    max-width: calc(45px + 330 * (100vw - 320px) / 1920);  
+    max-height: calc(45px + 330 * (100vw - 320px) / 1920);  
     transition: all 0.5s ease 0s;    
 }
 
-.title {
-    font-size: 18px;
+.title {    
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);
     color: rgba(234, 97, 25, 1.0);
-    margin: 10px;
+    margin: calc(3px + 10 * (100vw - 320px) / 1920);
 }
 
 .rating {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);
+    margin-bottom: calc(3px + 10 * (100vw - 320px) / 1920);
 }
 
 .rating span {
@@ -42,8 +42,8 @@
 }
 
 .price {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);
+    margin-bottom: calc(6px + 20 * (100vw - 320px) / 1920);
     font-weight: bold;
 }
 
@@ -56,19 +56,59 @@
     cursor: pointer;
 }
 
-.button {    
-    font-size: 18px;
-    font-weight: bold;
-    color: rgba(234, 97, 25, 1.0);
-    padding: 5px 10px;
-    margin-bottom: 20px;
-    background-color: transparent;
-    border: 1px solid rgba(234, 97, 25, 1.0);
-    border-radius: 10px;
-    transition: all 0.3s ease 0s;
+
+@media (max-width: 767px) {
+    .product {
+        max-width: calc(110px + 740 * (100vw - 320px) / 1920);
+        margin-top: calc(10px + 60 * (100vw - 320px) / 1920);
+    }
+    .img_wrapper {    
+        height: calc(100px + 660 * (100vw - 320px) / 1920);
+        width: calc(100px + 660 * (100vw - 320px) / 1920);
+        margin-top: calc(5px + 40 * (100vw - 320px) / 1920);  
+    }
+    .img {
+        max-width: calc(100px + 660 * (100vw - 320px) / 1920);  
+        max-height: calc(100px + 660 * (100vw - 320px) / 1920); 
+    }
+    .title {    
+        font-size: calc(10px + 36 * (100vw - 320px) / 1920);
+        margin: calc(3px + 20 * (100vw - 320px) / 1920);
+    }
+    .rating {
+        font-size: calc(10px + 36 * (100vw - 320px) / 1920);
+        margin-bottom: calc(3px + 20 * (100vw - 320px) / 1920);
+    }
+    .price {
+        font-size: calc(10px + 36 * (100vw - 320px) / 1920);
+        margin-bottom: calc(6px + 40 * (100vw - 320px) / 1920);
+    }
 }
 
-.button:hover {
-    color: white;
-    background-color: rgba(234, 97, 25, 1.0);
+@media (max-width: 550px) {
+    .product {
+        max-width: calc(210px + 1480 * (100vw - 320px) / 1920);
+        margin-top: calc(18px + 120 * (100vw - 320px) / 1920);
+    }
+    .img_wrapper {    
+        height: calc(190px + 1320 * (100vw - 320px) / 1920);
+        width: calc(190px + 1320 * (100vw - 320px) / 1920);
+        margin-top: calc(9px + 80 * (100vw - 320px) / 1920);  
+    }
+    .img {
+        max-width: calc(190px + 1320 * (100vw - 320px) / 1920);  
+        max-height: calc(190px + 1320 * (100vw - 320px) / 1920); 
+    }
+    .title {    
+        font-size: calc(12px + 72 * (100vw - 320px) / 1920);
+        margin: calc(5px + 40 * (100vw - 320px) / 1920);
+    }
+    .rating {
+        font-size: calc(12px + 72 * (100vw - 320px) / 1920);
+        margin-bottom: calc(5px + 40 * (100vw - 320px) / 1920);
+    }
+    .price {
+        font-size: calc(12px + 72 * (100vw - 320px) / 1920);
+        margin-bottom: calc(10px + 80 * (100vw - 320px) / 1920);
+    }
 }

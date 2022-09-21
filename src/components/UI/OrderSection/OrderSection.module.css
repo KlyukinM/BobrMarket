@@ -2,19 +2,19 @@
     min-height: 100%;
 }
 
-.wrapper {
-    /* display: flex; */
+.wrapper {    
     max-width: 100%;
-    margin: 20px 40px 20px 0;    
-    /* align-items: center;
-    justify-content: center; */
-    padding: 10px;
-    border-radius: 20px;
+    margin: calc(7px + 20 * (100vw - 320px) / 1920)
+            calc(15px + 40 * (100vw - 320px) / 1920) 
+            calc(7px + 20 * (100vw - 320px) / 1920)
+            0;
+    padding: calc(3px + 10 * (100vw - 320px) / 1920);
+    border-radius: calc(7px + 20 * (100vw - 320px) / 1920);
     box-shadow: 0 0 10px rgba(79, 95, 118, 0.4);
-    font-size: 18px;
-    padding: 10px;
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);
+    padding: calc(3px + 10 * (100vw - 320px) / 1920);
     position: sticky;
-    top: 20px;
+    top: calc(7px + 20 * (100vw - 320px) / 1920);
     text-align: center;
     transition: all 0.5s ease 0s;
 }
@@ -24,23 +24,24 @@
 }
 
 .title {
-    margin-top: 10px;
-    font-size: 24px;
+    margin-top: calc(3px + 10 * (100vw - 320px) / 1920);
+    font-size: calc(9px + 24 * (100vw - 320px) / 1920);
 }
 
 .price {
-    margin: 20px 0;
+    margin: calc(7px + 20 * (100vw - 320px) / 1920) 0;
 }
 
 .button {    
-    font-size: 18px;
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);
     font-weight: bold;    
     color: rgba(234, 97, 25, 1.0);
-    padding: 5px 10px;
-    margin-bottom: 20px;
+    padding: calc(1.5px + 5 * (100vw - 320px) / 1920)
+            calc(3px + 10 * (100vw - 320px) / 1920);
+    margin-bottom: calc(7px + 20 * (100vw - 320px) / 1920);
     background-color: transparent;  
     border: 1px solid rgba(234, 97, 25, 1.0);  
-    border-radius: 10px;
+    border-radius: calc(3px + 10 * (100vw - 320px) / 1920);
     transition: all 0.3s ease 0s;
 }
 

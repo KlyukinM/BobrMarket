@@ -10,11 +10,11 @@
     transition: all 0.5s ease 0s;
 }
 
-.myModalContent {
-    padding: 25px;
-    background: white;
-    border-radius: 16px;
-    min-width: 250px;
+.myModalContent {    
+    padding: calc(8px + 25 * (100vw - 320px) / 1920);
+    background: white;    
+    border-radius: calc(6px + 16 * (100vw - 320px) / 1920);    
+    min-width: calc(120px + 250 * (100vw - 320px) / 1920);
     opacity: 0;
     transition: all 0.5s ease 0s;
 }
@@ -31,18 +31,18 @@
     opacity: 1; 
 }
 
-.content {
-    font-size: 24px;
+.content {    
+    font-size: calc(10px + 24 * (100vw - 320px) / 1920);
     text-align: center;
     line-height: 200%;
 }
 
 .title {
-    font-size: 28px;
+    font-size: calc(12px + 28 * (100vw - 320px) / 1920);
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: calc(3px + 10 * (100vw - 320px) / 1920);
 }
 
 .signature {
-    margin-top: 20px;
+    margin-top: calc(7px + 20 * (100vw - 320px) / 1920);
 }

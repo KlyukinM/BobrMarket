@@ -2,7 +2,7 @@
     flex: 1 1 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 20px;    
+    justify-content: space-around;      
+    margin-bottom: calc(8px + 20 * (100vw - 320px) / 1920);  
 }
 

@@ -1,9 +1,10 @@
 .button {
-    padding: 10px 10px 10px 10px;
+    padding: calc(3px + 10 * (100vw - 320px) / 1920);
     background-color: transparent;
     color: rgba(234, 97, 25, 1.0);
-    font-size: 16px;
+    font-size: calc(8px + 16 * (100vw - 320px) / 1920);
     text-transform: uppercase;   
+    white-space: nowrap;
     flex: 0 0 100%;
     transition: all 0.1s ease 0s;
     width: 100%;
@@ -16,11 +17,11 @@
 }
 
 .active {
-    padding: 10px 10px 10px 10px;
+    padding: calc(3px + 10 * (100vw - 320px) / 1920);
     background-color: rgba(234, 97, 25, 1.0);
     color: white;
     font-weight: 700;
-    font-size: 16px;
+    font-size: calc(8px + 16 * (100vw - 320px) / 1920);
     text-transform: uppercase;   
     flex: 0 0 100%;   
     width: 100%;

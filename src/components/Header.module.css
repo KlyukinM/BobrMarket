@@ -1,8 +1,8 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 140px;
+    align-items: center;    
+    height: calc(50px + 140 * (100vw - 320px) / 1920);
     border-bottom: 2px solid rgba(79, 95, 118, 1.0);
 }
 
@@ -24,19 +24,19 @@
 
 .logo {
     background: url('../images/logo.png') no-repeat center / cover;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;   
-    margin-left: 20px;
+    height: calc(40px + 100 * (100vw - 320px) / 1920);
+    width: calc(40px + 100 * (100vw - 320px) / 1920);
+    border-radius: 50%;
+    margin-left: calc(5px + 20 * (100vw - 320px) / 1920);
     transition: all 0.5s ease 0s;
 }
 
 .logo_title {
-    font-size: 36px;
+    font-size: calc(18px + 36 * (100vw - 320px) / 1920);
     text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 7px;
-    margin-left: 15px;
+    font-weight: bold;    
+    letter-spacing: calc(2px + 7 * (100vw - 320px) / 1920);    
+    margin-left: calc(4px + 15 * (100vw - 320px) / 1920);
     color: rgba(44, 62, 84, 1.0);
 }
 
@@ -45,15 +45,18 @@
 }
 
 .svg_wrapper {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 0 25px 25px 0;
+    position: relative;    
+    width: calc(20px + 50 * (100vw - 320px) / 1920);
+    height: calc(20px + 50 * (100vw - 320px) / 1920);    
+    margin: 0 
+            calc(7px + 25 * (100vw - 320px) / 1920) 
+            calc(7px + 25 * (100vw - 320px) / 1920) 
+            0;
 }
 
 .svg {
-    width: 50px;
-    height: 50px;
+    width: calc(20px + 50 * (100vw - 320px) / 1920);
+    height: calc(20px + 50 * (100vw - 320px) / 1920);
     fill: rgba(44, 62, 84, 0.6);
     transition: all 0.3s ease 0s;    
 }
@@ -63,8 +66,8 @@
 }
 
 .svg_active {    
-    width: 50px;
-    height: 50px;
+    width: calc(20px + 50 * (100vw - 320px) / 1920);
+    height: calc(20px + 50 * (100vw - 320px) / 1920);
     fill: rgba(44, 62, 84, 1.0);
     transition: all 0.3s ease 0s;     
 }
@@ -75,16 +78,16 @@
 
 .number_wrapper {
     color: white;
-    background-color: rgba(234, 97, 25, 1.0);
-    width: 25px;
-    height: 25px;    
+    background-color: rgba(234, 97, 25, 1.0);    
+    width: calc(10px + 25 * (100vw - 320px) / 1920);
+    height: calc(10px + 25 * (100vw - 320px) / 1920);    
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 25px;
-    left: 14px;
+    bottom: calc(10px + 25 * (100vw - 320px) / 1920);    
+    left: calc(6px + 14 * (100vw - 320px) / 1920);
     box-shadow: 0 0 5px rgba(44, 62, 84, 0.8);
 }
 
@@ -94,6 +97,6 @@
 
 .number {
     font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 3px;
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);    
+    margin-bottom: calc(1px + 3 * (100vw - 320px) / 1920);
 }

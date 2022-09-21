@@ -1,6 +1,6 @@
 .button {
-    width: 40px;
-    height: 40px;
+    width: calc(20px + 40 * (100vw - 320px) / 1920);
+    height: calc(20px + 40 * (100vw - 320px) / 1920);
     fill: rgba(79, 95, 118, 1.0);
     transition: all 0.3s ease 0s;
     margin-bottom: 20px;
@@ -13,11 +13,11 @@
 }
 
 .big {
-    width: 60px;
-    height: 60px;
+    width: calc(30px + 60 * (100vw - 320px) / 1920);
+    height: calc(30px + 60 * (100vw - 320px) / 1920);
     fill: rgba(79, 95, 118, 1.0);
     transition: all 0.3s ease 0s;
-    margin-bottom: 20px;
+    margin-bottom: calc(7px + 20 * (100vw - 320px) / 1920);
     transition: all 0.3s ease 0s;
 }
 

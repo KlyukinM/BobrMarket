@@ -11,13 +11,16 @@ export default function BasketPage () {
     const {cart} = useContext(CartContext)
     const [modal, setModal] = useState(false)
 
+    // Состояние для пустой корзины
+    let basketIsFull = Boolean(cart.length)
+
     const sortedProducts = [...cart].sort((a, b) => a.id - b.id)
 
     return (
         <div>
             <Header basket={false}/>
             <h2 className={cl.page_title}>Your Shopping Cart</h2>
-            {+cart.length 
+            {basketIsFull 
                 ? <div className={cl.wrapper}>
                     <div className={cl.products}>
                         {sortedProducts.map((product, index) => 

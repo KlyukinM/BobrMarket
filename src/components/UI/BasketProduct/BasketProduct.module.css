@@ -1,13 +1,14 @@
 .wrapper {
     display: flex;
     max-width: 100%;
-    margin: 20px 40px;    
+    margin: calc(7px + 20 * (100vw - 320px) / 1920) 
+            calc(14px + 40 * (100vw - 320px) / 1920);    
     align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border-radius: 20px;
+    justify-content: space-between;
+    padding: calc(3px + 10 * (100vw - 320px) / 1920);
+    border-radius: calc(7px + 20 * (100vw - 320px) / 1920);
     box-shadow: 0 0 10px rgba(79, 95, 118, 0.4);
-    font-size: 18px;
+    font-size: calc(7px + 18 * (100vw - 320px) / 1920);
     transition: all 0.5s ease 0s;
 }
 
@@ -16,21 +17,21 @@
 }
 
 .image {
-    flex: 0 1 30%;
+    flex: 0 1 35%;
     display: flex;
     justify-content: center;
 }
 
 .image img {
-    height: 80px;
+    height: calc(30px + 80 * (100vw - 320px) / 1920);
 }
 
 .title {
-    flex: 0 1 30%;
+    flex: 0 1 25%;
 }
 
 .price {
-    flex: 0 1 30%;
+    flex: 0 1 20%;
 }
 
 .button_wrapper {
@@ -39,15 +40,14 @@
 
 
 .delete_icon {
-    width: 30px;
-    height: 30px;
+    width: calc(10px + 30 * (100vw - 320px) / 1920);
+    height: calc(10px + 30 * (100vw - 320px) / 1920);
     fill: rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease 0s;
-    cursor: pointer;
+    cursor: pointer;    
 }
 
 .delete_icon:hover {
-    width: 30px;
-    height: 30px;
+    transform: scale(1.2);
     fill: rgba(234, 97, 25, 1.0);
 }
